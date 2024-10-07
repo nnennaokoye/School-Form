@@ -14,16 +14,16 @@ const FormLayout: React.FC<LayoutProps> = ({ children }) => {
       left="0"
       right="0"
       bottom="0"
-      overflow="hidden"       
+      overflow="auto"       
       bg="white"
-      height="100vh"           
+      minheight="100vh"           
     >
       <Card
         direction={{ base: 'column', md: 'row' }} 
         boxShadow="md"
         width="full"
         height="100%"         
-        overflow="hidden"
+        overflow="auto"
       >
         <Box
           width={{ base: '100%', md: '250px' }}    
@@ -40,7 +40,7 @@ const FormLayout: React.FC<LayoutProps> = ({ children }) => {
           flex="1"
           height="100%"         
         >
-          <CardBody style={{ height: '100%', overflowY: 'hidden' }}>
+          <CardBody style={{ height: '100%', overflowY: 'auto' }}>
             {children}
           </CardBody>
         </Stack>
