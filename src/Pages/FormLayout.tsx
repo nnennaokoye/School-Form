@@ -19,14 +19,14 @@ const FormLayout: React.FC<LayoutProps> = ({ children }) => {
       height="100vh"           
     >
       <Card
-        direction={{ base: 'column', md: 'row' }}  // Stacks vertically on small screens, horizontally on larger screens
+        direction={{ base: 'column', md: 'row' }} 
         boxShadow="md"
         width="full"
-        height="100%"         // 100% of the viewport height
+        height="100%"         
         overflow="hidden"
       >
         <Box
-          width={{ base: '100%', md: '250px' }}    // Full width on mobile, fixed width on larger screens
+          width={{ base: '100%', md: '250px' }}    
           bg="#0047AB"
           display="flex"
           alignItems="center"
@@ -38,9 +38,9 @@ const FormLayout: React.FC<LayoutProps> = ({ children }) => {
 
         <Stack
           flex="1"
-          height="100%"         // Ensure content fills the remaining space
+          height="100%"         
         >
-          <CardBody style={{ height: '100%', overflowY: 'auto' }}>
+          <CardBody style={{ height: '100%', overflowY: 'hidden' }}>
             {children}
           </CardBody>
         </Stack>

@@ -41,14 +41,9 @@ const DocumentsUploadForm: React.FC<DocumentsUploadFormProps> = ({ prevStep, goT
             initialValues={documents} 
             validationSchema={validationSchema}
             onSubmit={(values, { resetForm }) => {
-              // Dispatch the form values to the Redux store
               dispatch(updateDocuments(values)); 
-              setModalOpen(true);  // Open success modal
-              
-              // Reset the Formik form state
+              setModalOpen(true);  
               resetForm();  
-              
-              // Reset the form data in Redux after submission
               dispatch(resetFormAction());
             }}
           >
@@ -166,7 +161,7 @@ const DocumentsUploadForm: React.FC<DocumentsUploadFormProps> = ({ prevStep, goT
             <Button colorScheme="blue" onClick={() => {
               setModalOpen(false);
               dispatch(resetFormAction()); 
-              goToFirstStep();  // Navigate back to the first step
+              goToFirstStep();  
             }}>
               Close
             </Button>
