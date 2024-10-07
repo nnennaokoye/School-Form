@@ -9,24 +9,24 @@ interface LayoutProps {
 const FormLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Box
-      position="fixed"          
+      position="fixed"
       top="0"
       left="0"
       right="0"
       bottom="0"
-      overflow="auto"       
+      overflow="hidden"
       bg="white"
-      minheight="100vh"           
+      minHeight="100vh" // Allow for dynamic height with minHeight
     >
       <Card
-        direction={{ base: 'column', md: 'row' }} 
+        direction={{ base: 'column', md: 'row' }}
         boxShadow="md"
         width="full"
-        height="100%"         
-        overflow="auto"
+        height="100%"
+        overflow="hidden"
       >
         <Box
-          width={{ base: '100%', md: '250px' }}    
+          width={{ base: '100%', md: '250px' }}
           bg="#0047AB"
           display="flex"
           alignItems="center"
@@ -38,9 +38,9 @@ const FormLayout: React.FC<LayoutProps> = ({ children }) => {
 
         <Stack
           flex="1"
-          height="100%"         
+          height="100%" 
         >
-          <CardBody style={{ height: '100%', overflowY: 'auto' }}>
+          <CardBody style={{ height: '100%', overflowY: 'auto' }}> 
             {children}
           </CardBody>
         </Stack>
